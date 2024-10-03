@@ -32,6 +32,13 @@ body {
 .bg-theme {
   background-color: var(--primary-color);
 }
+.bg-secondary-theme {
+  background-color: var(--secondary-color);
+}
+
+.text-theme-primary {
+  color: var(--primary-color);
+}
 
 input[type="text"],
 input[type="email"] {
