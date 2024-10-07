@@ -30,6 +30,8 @@ import {
   provideRemoteConfig,
 } from '@angular/fire/remote-config';
 import { getVertexAI, provideVertexAI } from '@angular/fire/vertexai-preview';
+import { FormsModule } from '@angular/forms';
+import { CategoriesComponent } from './categories/categories.component';
 
 @NgModule({
   declarations: [
@@ -37,8 +39,9 @@ import { getVertexAI, provideVertexAI } from '@angular/fire/vertexai-preview';
     HeaderComponent,
     FooterComponent,
     DashboardComponent,
+    CategoriesComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule],
+  imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [
     provideFirebaseApp(() =>
       initializeApp({
