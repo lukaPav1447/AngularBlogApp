@@ -54,19 +54,19 @@ import { CategoriesComponent } from './categories/categories.component';
       })
     ),
     provideAuth(() => getAuth()),
-    provideAnalytics(() => getAnalytics()),
-    ScreenTrackingService,
-    UserTrackingService,
-    provideAppCheck(() => {
-      // TODO get a reCAPTCHA Enterprise here https://console.cloud.google.com/security/recaptcha?project=_
-      const provider = new ReCaptchaEnterpriseProvider(
-        'AIzaSyD79WbtX5MUtFKKMD_RYTpJ3tyYDOwQjb8'
-      );
-      return initializeAppCheck(undefined, {
-        provider,
-        isTokenAutoRefreshEnabled: true,
-      });
-    }),
+    // provideAnalytics(() => getAnalytics()),
+    // ScreenTrackingService,
+    // UserTrackingService,
+    // provideAppCheck(() => {
+    //   // TODO get a reCAPTCHA Enterprise here https://console.cloud.google.com/security/recaptcha?project=_
+    //   const provider = new ReCaptchaEnterpriseProvider(
+    //     'AIzaSyD79WbtX5MUtFKKMD_RYTpJ3tyYDOwQjb8'
+    //   );
+    //   return initializeAppCheck(undefined, {
+    //     provider,
+    //     isTokenAutoRefreshEnabled: true,
+    //   });
+    // }),
     provideFirestore(() => getFirestore()),
     provideDatabase(() => getDatabase()),
     provideFunctions(() => getFunctions()),
